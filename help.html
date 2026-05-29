@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help & FAQ — SplitEase</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F7F7F5;
+      color: #111111;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #E4E4E0;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .back {
+      text-decoration: none;
+      color: #1A6B47;
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .header-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-left: 8px;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 32px auto;
+      padding: 0 24px 60px;
+    }
+
+    h1 { font-size: 26px; font-weight: 800; margin-bottom: 6px; }
+
+    .subtitle {
+      color: #888885;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #888885;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 28px 0 12px;
+    }
+
+    .faq-card {
+      background: white;
+      border: 1px solid #E4E4E0;
+      border-radius: 14px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 16px 18px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .faq-question:hover { background: #FAFAF8; }
+
+    .faq-arrow {
+      font-size: 18px;
+      color: #888885;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 18px 16px;
+      font-size: 14px;
+      color: #555552;
+      line-height: 1.6;
+      border-top: 1px solid #F0F0EC;
+      padding-top: 14px;
+    }
+
+    .faq-card.open .faq-answer  { display: block; }
+    .faq-card.open .faq-arrow   { transform: rotate(180deg); }
+
+    .contact-card {
+      background: #E8F5EE;
+      border: 1px solid rgba(26,107,71,0.15);
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: #555552;
+      margin-bottom: 14px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background: #1A6B47;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="index.html">‹ Back</a>
+  <span class="header-title">Help & FAQ</span>
+</header>
+
+<main>
+  <h1>Help & FAQ</h1>
+  <p class="subtitle">Find answers to the most common questions about SplitEase.</p>
+
+  <!-- Getting started -->
+  <div class="section-title">Getting Started</div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      What is SplitEase?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      SplitEase is an expense splitting app for groups — roommates, hostel rooms,
+      trips, or any shared living situation. Add expenses, see who owes what, and
+      settle up with the minimum number of payments.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      How do I create a group?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      On the main screen, tap <strong>New group</strong>. Give it a name, choose a type
+      (hostel, trip, home etc.) and select your currency. The group is created instantly
+      and you get a 6-character invite code to share with your roommates.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      How do others join my group?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      Share the 6-character invite code with your roommates. They tap
+      <strong>Enter code</strong> on the main screen, type the code, and they're in.
+      You can copy the code from the group card on the home screen.
+    </div>
+  </div>
+
+  <!-- Expenses -->
+  <div class="section-title">Expenses</div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      How do I add an expense?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      Open the group, tap <strong>+ Add expense</strong>. Enter the amount,
+      what it was for, who paid, which members to split with, and the category.
+      The app calculates each person's share automatically and saves it in real time.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      How is the expense split?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      Expenses are split equally between all selected members by default.
+      For example, if 3 people split a PKR 3000 expense, each person owes PKR 1000.
+      You can uncheck members to exclude them from a specific expense.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      Can I delete an expense?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      Yes, but only the person who added the expense can delete it. Swipe left on
+      the expense card in the Expenses tab to reveal the delete button. Other members
+      will see the expense but cannot delete it.
+    </div>
+  </div>
+
+  <!-- Settlements -->
+  <div class="section-title">Settlements & Balances</div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      How does the settlement calculation work?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      SplitEase uses a minimum transactions algorithm. It calculates each
+      person's net balance (total paid minus fair share), then figures out
+      the fewest payments needed to settle all debts. For example, 5 people
+      need at most 4 payments — not 10.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      What does "You owe" vs "You get back" mean?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <strong>You owe</strong> means you have paid less than your fair share across
+      all group expenses. <strong>You get back</strong> means you have paid more than
+      your fair share and others need to pay you.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      How do I mark a payment as paid?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      Go to the group → tap <strong>Settle up</strong>. You will see the payments
+      you need to make. Once you have physically paid someone (cash, bank transfer,
+      etc.), tap <strong>I've paid this</strong> and confirm. The payment disappears
+      from the list for everyone in real time.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      Can I share the settlement summary?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      Yes. On the Settle up screen, tap the <strong>Share settlement summary</strong>
+      button. This generates a clean text summary that you can share to WhatsApp,
+      SMS, or any messaging app.
+    </div>
+  </div>
+
+  <!-- Account -->
+  <div class="section-title">Account</div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      How do I change my display name?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      Tap your avatar icon on the main screen → tap your name under
+      <strong>Display name</strong> → tap <strong>Edit</strong> → enter
+      your new name and tap <strong>Save</strong>.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      How do I delete my account?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      Go to your profile → scroll to the bottom → tap <strong>Delete account</strong>.
+      This will permanently delete your account and all associated data within 30 days.
+      Note: your expenses in shared groups will remain visible to other members.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question" onclick="toggle(this)">
+      I signed in with Google but can't see my groups.
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      Make sure you are signed in with the same Google account you used to create
+      or join the groups. Groups are tied to your account UID, not just your email.
+      Sign out and sign back in with the correct account.
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-card">
+    <h3>Still need help?</h3>
+    <p>Can't find the answer you're looking for? We're happy to help.</p>
+    <a class="contact-btn" href="mailto:support@splitease.app">
+      Contact Support
+    </a>
+  </div>
+</main>
+
+<script>
+  function toggle(el) {
+    el.parentElement.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
