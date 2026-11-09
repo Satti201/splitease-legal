@@ -22,20 +22,23 @@
 
         <h2>1. Information We Collect</h2>
         <ul>
-            <li><strong>Account Information:</strong> Display Name, Email Address, and User ID (UID) provided during registration or Google Sign-In.</li>
-            <li><strong>Group Expense Data:</strong> Group names, member lists, expense titles, amounts, split ratios, and payment history entered into the app.</li>
-            <li><strong>Device Tokens:</strong> Firebase Cloud Messaging (FCM) push notification tokens to notify you about group settlements.</li>
+            <li><strong>Account Information:</strong> Display Name, Email Address, Profile Photo URL (if signing in via Google), and User ID (UID) provided during registration or Google Sign-In.</li>
+            <li><strong>Group Expense Data:</strong> Group names, member lists, expense titles, amounts, currencies, split ratios, comments, and payment history entered into the app.</li>
+            <li><strong>On-Device Receipt Scanning (OCR):</strong> When you scan a receipt using your camera or photo gallery, image text recognition is processed locally on your device using Google ML Kit to detect the total amount. Receipt images are not uploaded to external servers.</li>
+            <li><strong>Device Tokens:</strong> Firebase Cloud Messaging (FCM) push notification tokens used to deliver group expense and settlement alerts.</li>
+            <li><strong>Diagnostics &amp; Usage Analytics:</strong> Anonymous app usage events (via Firebase Analytics) and crash logs/diagnostics (via Firebase Crashlytics) to monitor stability, fix bugs, and improve user experience.</li>
         </ul>
 
         <h2>2. How We Use Your Information</h2>
         <ul>
             <li>To calculate group balances and debt minimization settlements.</li>
-            <li>To synchronize real-time group expense data across members.</li>
-            <li>To deliver push notifications for debt reminders.</li>
+            <li>To synchronize real-time group expense data across group members.</li>
+            <li>To deliver push notifications for group activity and settlement updates.</li>
+            <li>To diagnose crashes and improve application performance and reliability.</li>
         </ul>
 
-        <h2>3. Data Storage & Third-Party Services</h2>
-        <p>Your data is securely stored using <strong>Google Firebase Firestore</strong> and protected with industry-standard encryption protocols. We do not sell or trade your personal data to third parties.</p>
+        <h2>3. Data Storage &amp; Third-Party Services</h2>
+        <p>Your data is securely stored and processed using <strong>Google Firebase</strong> (Firebase Authentication, Cloud Firestore, Cloud Messaging, Crashlytics, and Analytics) and protected with industry-standard encryption in transit (HTTPS/TLS) and at rest. We do not sell, rent, or trade your personal data to third parties.</p>
 
         <h2>4. Account Deletion Rights</h2>
         <p>You have the right to request the deletion of your account and personal data at any time. You can delete your account directly inside the app under <em>Profile & Settings > Delete Account</em>, or request web deletion at <a href="delete-account.html">Delete Account Request</a> or by emailing <a href="mailto:lightningdragon116@gmail.com">lightningdragon116@gmail.com</a>.</p>
